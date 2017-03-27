@@ -2,6 +2,7 @@
 var database = firebase.database();
 var firstName="";
 var lastName="";
+var phoneNumber = "";
 //Question Array
 var questionArray = [
 "How much can you do to get through to the most difficult students?",
@@ -64,33 +65,40 @@ function buttonClicked() {
 	console.log(questionCounter+" "+ selectedAnswers);
 		
 	if(questionCounter == 0) {
-		firstName = document.getElementById("firstName").value
-		lastName = document.getElementById("lastName").value
+		firstName = document.getElementById("firstName").value;
+		lastName = document.getElementById("lastName").value;
+		phoneNumber = document.getElementById("cellPhone").value;
 
 		
 		if(firstName == ""){
-				noAns.style.display = "inline";
-				document.getElementById("firstNameHeader").style.backgroundColor = "#ff9999"
+				//noAns.style.display = "inline";
+				document.getElementById("firstNameAlert").style.display = "block";
 				return;
 		} else if(lastName=="") {
 
-				noAns.style.display = "inline";
-				document.getElementById("firstNameHeader").style.backgroundColor = "white"
-				document.getElementById("lastNameHeader").style.backgroundColor = "#ff9999"
+				//noAns.style.display = "inline";
+				document.getElementById("firstNameAlert").style.display = "none";
+				document.getElementById("lastNameAlert").style.display = "block";
+				return;
+		} else if (phoneNumber==""){
+				//noAns.style.display = "inline";
+				document.getElementById("lastNameAlert").style.display = "none";
+				document.getElementById("phoneAlert").style.display = "block";
 				return;
 		} else if ($("input[name='checkbox']:checked").size() ==0) {
-				noAns.style.display = "inline";
-				document.getElementById("lastNameHeader").style.backgroundColor = "white"
-				document.getElementById("checkboxHeader").style.backgroundColor = "#ff9999"
+				//noAns.style.display = "inline";
+				document.getElementById("phoneAlert").style.display = "none";
+				document.getElementById("checkboxAlert").style.display = "block";
 				return;
 		} else {
-			noAns.style.display = "none";
+			//noAns.style.display = "none";
 			selectedAnswers.push(firstName);
 			selectedAnswers.push(lastName);
-			var course = [];
-			document.getElementById("checkboxHeader").style.backgroundColor = "white"
+			selectedAnswers.push(phoneNumber);
+			var course = "";
+			document.getElementById("checkboxAlert").style.display = "none";
 			$("input:checkbox[name=checkbox]:checked").each(function(){
-					course.push($(this).val());
+					course = course + " " + $(this).val();
 			   
 			});
 			selectedAnswers.push(course);
@@ -124,7 +132,7 @@ function buttonClicked() {
 
 		if (questionCounter == (questionArray.length)) {
 			console.log("switch to submit");
-			document.getElementById("next").innerHTML = "submit";
+			document.getElementById("next").innerHTML = "Submit";
 			document.getElementById("next").className = "btn btn-success";
 
 		} 
