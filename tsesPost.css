@@ -93,3 +93,10 @@ New: IOS will still zoom, unless you use 16px on the input without the focus.
     font-size: 16px;
   }
 }
+
+body {
+  font-size: 16px;
+}
+input[type="text"]
+  font-size: inherit;
+}
