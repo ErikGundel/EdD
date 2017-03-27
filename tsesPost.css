@@ -1,8 +1,10 @@
 html,body {
+
   padding:0;margin:0;
+
 }
 .wrap {
-  font:16px Arial, san-serif;
+  font:14px Arial, san-serif;
 }
 h1.likert-header {
   padding-left:4.25%;
@@ -10,7 +12,7 @@ h1.likert-header {
 }
 form .statement {
   display:block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   padding: 15px 0 0 4.25%;
   margin-bottom:10px;
@@ -75,7 +77,18 @@ form .buttons .submit:hover {background-color: #14892c;}
 #close {
   display: none;
 }
-	
+.alert {
+  font-size: 16px;
+  padding: 5px;
+  margin: 5px 5px 0px 5px;
+  display: none;
+}
+
+.form-group {
+  margin: 5px;
+}
+
+  
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
   select:focus,
   textarea:focus,
@@ -84,7 +97,6 @@ form .buttons .submit:hover {background-color: #14892c;}
     background: #eee;
   }
 }
-New: IOS will still zoom, unless you use 16px on the input without the focus.
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
   select,
