@@ -42,96 +42,103 @@
     </nav>
 
     <div class="container">
-        <h1 id="mainHeader"class="starter-template">Please complete the following survey!</h1>
-        <p id="mainPara" class="lead">Thank you in advance.</p>
-
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h1 id="mainHeader"class="starter-template">Please complete the following survey!</h1>
+          <p id="mainPara" class="lead">Thank you in advance.</p>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
     </div><!-- /.container -->
 
 
 <div class="container">
-  <div id="nameCourse">
-<form class="form-inline">
-  <div class="form-group">
-    <label id="firstNameHeader" for="">First Name:</label>
-    <input type="" class="form-control" id="firstName">
+  <div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div id="nameCourse">
+      <form class="form-inline">
+        <div class="form-group">
+          <label id="firstNameHeader" for="">First Name:</label>
+          <input type="" class="form-control" id="firstName">
+        </div>
+        <div id="lastNameHeader" class="form-group">
+          <label for="">Last Name:</label>
+          <input type="" class="form-control" id="lastName">
+        </div>
+      </form>
+
+      <h2 id="checkboxHeader">Select your Class:</h2>
+      <p>Please check all that apply.</p>
+      <form>
+        <div class="checkbox">
+          <label><input type="checkbox" name="checkbox" value="ED206">ED 206</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="checkbox" value="ED211">ED 211</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="checkbox" value="ED212">ED 212</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="checkbox" value="EPY203">EPY 203</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="checkbox" value="EPY204">EPY 204</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="wrap" id="likertForm">
+      <form action="">
+
+        <label class="statement" id="questionNo"></label>
+        <label class="statement" id="question"></label>
+        <ul class='likert'>
+          <li>
+            <input class="radioButton" type="radio" name="likert" value="1">
+            <label>None At All</label>
+          </li>
+          <li>
+            <input class="radioButton" type="radio" name="likert" value="2">
+          </li>
+          <li>
+            <input class="radioButton" type="radio" name="likert" value="3">
+            <label>Very Little</label>
+          </li>
+          <li>
+            <input class="radioButton" type="radio" name="likert" value="4">
+          </li>
+          <li>
+            <input class="radioButton" type="radio" name="likert" value="5">
+            <label>Some Degree</label>
+          </li>
+          <li>
+            <input class="radioButton" type="radio" name="likert" value="6">
+          </li>
+          <li>
+            <input class="radioButton" type="radio" name="likert" value="7">
+            <label>Quite A Bit</label>
+          </li>
+          <li>
+            <input class="radioButton" type="radio" name="likert"value="8">
+          </li>
+          <li>
+            <input class="radioButton" type="radio" name="likert" value="9">
+            <label>A Great Deal</label>
+          </li>
+        </ul>
+
+      </form>
+      </div>
+
+            <button type="button" class="btn btn-default btn-sm" style="margin-left: 30px" id="next" onclick="buttonClicked()"> Next</button> 
+          <button type="button" class="btn btn-danger" style="margin-left: 30px" id="noAns" >Please Select a Response</button>
+
+    </div>
+    <div class="col-md-1"></div>
   </div>
-  <div id="lastNameHeader" class="form-group">
-    <label for="">Last Name:</label>
-    <input type="" class="form-control" id="lastName">
-  </div>
-</form>
-
-  <h2 id="checkboxHeader">Select your Class:</h2>
-  <p>Please check all that apply.</p>
-  <form>
-    <div class="checkbox">
-      <label><input type="checkbox" name="checkbox" value="ED206">ED 206</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="checkbox" value="ED211">ED 211</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="checkbox" value="ED212">ED 212</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="checkbox" value="EPY203">EPY 203</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="checkbox" value="EPY204">EPY 204</label>
-    </div>
-  </form>
-</div>
-
-<div class="wrap" id="likertForm">
-  <form action="">
-
-    <label class="statement" id="questionNo">
-</label>
-    <label class="statement" id="question">
-</label>
-    <ul class='likert'>
-      <li>
-        <input class="radioButton" type="radio" name="likert" value="1">
-        <label>None At All</label>
-      </li>
-      <li>
-        <input class="radioButton" type="radio" name="likert" value="2">
-      </li>
-      <li>
-        <input class="radioButton" type="radio" name="likert" value="3">
-        <label>Very Little</label>
-      </li>
-      <li>
-        <input class="radioButton" type="radio" name="likert" value="4">
-      </li>
-      <li>
-        <input class="radioButton" type="radio" name="likert" value="5">
-        <label>Some Degree</label>
-      </li>
-      <li>
-        <input class="radioButton" type="radio" name="likert" value="6">
-      </li>
-      <li>
-        <input class="radioButton" type="radio" name="likert" value="7">
-        <label>Quite A Bit</label>
-      </li>
-      <li>
-        <input class="radioButton" type="radio" name="likert"value="8">
-      </li>
-      <li>
-        <input class="radioButton" type="radio" name="likert" value="9">
-        <label>A Great Deal</label>
-      </li>
-    </ul>
-
-  </form>
-  </div>
-
-        <button type="button" class="btn btn-default btn-sm" style="margin-left: 30px" id="next" onclick="buttonClicked()"> Next</button> 
-      <button type="button" class="btn btn-danger" style="margin-left: 30px" id="noAns" >Please Select a Response</button>
-
-
-</div>
 
 
 
