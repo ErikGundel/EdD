@@ -3,6 +3,7 @@ var database = firebase.database();
 var firstName="";
 var lastName="";
 var phoneNumber = "";
+var bestTime="";
 //Question Array
 var questionArray = [
 "How much can you do to get through to the most difficult students?",
@@ -68,6 +69,7 @@ function buttonClicked() {
 		firstName = document.getElementById("firstName").value;
 		lastName = document.getElementById("lastName").value;
 		phoneNumber = document.getElementById("cellPhone").value;
+		bestTime = document.getElementById("bestTime").value;
 
 		
 		if(firstName == ""){
@@ -85,9 +87,14 @@ function buttonClicked() {
 				document.getElementById("lastNameAlert").style.display = "none";
 				document.getElementById("phoneAlert").style.display = "block";
 				return;
-		} else if ($("input[name='checkbox']:checked").size() ==0) {
+		} else if (bestTime==""){
 				//noAns.style.display = "inline";
 				document.getElementById("phoneAlert").style.display = "none";
+				document.getElementById("timeAlert").style.display = "block";
+				return; 
+		} else if ($("input[name='checkbox']:checked").size() ==0) {
+				//noAns.style.display = "inline";
+				document.getElementById("timeAlert").style.display = "none";
 				document.getElementById("checkboxAlert").style.display = "block";
 				return;
 		} else {
@@ -95,6 +102,7 @@ function buttonClicked() {
 			selectedAnswers.push(firstName);
 			selectedAnswers.push(lastName);
 			selectedAnswers.push(phoneNumber);
+			selectedAnswers.push(bestTime);
 			var course = "";
 			document.getElementById("checkboxAlert").style.display = "none";
 			$("input:checkbox[name=checkbox]:checked").each(function(){
