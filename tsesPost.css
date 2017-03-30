@@ -77,6 +77,9 @@ form .buttons .submit:hover {background-color: #14892c;}
 #close {
   display: none;
 }
+#thankyou {
+  display: none;
+}
 .alert {
   font-size: 16px;
   padding: 5px;
