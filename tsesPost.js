@@ -53,8 +53,9 @@ function collectData() {
   database.ref().child(firstName + " " + lastName).set(selectedAnswers);
   document.getElementById("likertForm").style.display = "none";
   document.getElementById("mainPara").style.display = "none";
-  document.getElementById("mainHeader").innerHTML = "Thank you so much for your time!!";
+  document.getElementById("mainHeader").style.display = "none";
   document.getElementById("next").style.display = "none";
+  document.getElementById("thankyou").style.display = "block";
 
 
 }
