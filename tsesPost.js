@@ -29,7 +29,7 @@ var questionArray = [
 "How well can you respond to defiant students? ",
 "How much can you assist families in helping their children do well in school?",
 "How well can you implement alternative strategies in your classroom?",
-"How well can you provide appropriate challenges for very capable students?",
+"How well can you provide appropriate challenges for very capable students?"
 ];
 var selectedAnswers = [];
 var questionCounter = 0;
@@ -91,7 +91,7 @@ function buttonClicked() {
 				//noAns.style.display = "inline";
 				document.getElementById("phoneAlert").style.display = "none";
 				document.getElementById("timeAlert").style.display = "block";
-				return; 
+				return;
 		} else if ($("input[name='checkbox']:checked").size() ==0) {
 				//noAns.style.display = "inline";
 				document.getElementById("timeAlert").style.display = "none";
@@ -118,7 +118,7 @@ function buttonClicked() {
 		questionCounter++;
 		displayQuestion();
 		clearCheck();
-		displayQuestionNumber(); 
+		displayQuestionNumber();
 	}	else if(questionCounter < (questionArray.length)) {
 			
 		if ($("input[name='likert']:checked").size() ==0) {
@@ -135,7 +135,7 @@ function buttonClicked() {
 		questionCounter++;
 		displayQuestion();
 		clearCheck();
-		displayQuestionNumber(); 
+		displayQuestionNumber();
 
 
 		if (questionCounter == (questionArray.length)) {
@@ -143,7 +143,7 @@ function buttonClicked() {
 			document.getElementById("next").innerHTML = "Submit";
 			document.getElementById("next").className = "btn btn-success";
 
-		} 
+		}
 
 	} else {
 		if ($("input[name='likert']:checked").size() ==0) {
@@ -159,7 +159,7 @@ function buttonClicked() {
 
 		collectData();
 		return;
-	}	
+	}
 
 }
 
@@ -170,7 +170,7 @@ function buttonClicked() {
 
 $(document).ready(function() {
 displayQuestion();
-displayQuestionNumber(); 
+displayQuestionNumber();
 clearCheck();
 
 })
