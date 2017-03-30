@@ -29,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Doctoral Research</a>
+          <a class="navbar-brand" href="#">WCSU Doctoral Research</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -41,23 +41,13 @@
       </div>
     </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-          <h1 id="mainHeader"class="starter-template">Please complete the following survey!</h1>
-          <p id="mainPara" class="lead">Thank you in advance.</p>
-        </div>
-        <div class="col-md-1"></div>
-      </div>
-    </div><!-- /.container -->
-
-
 <div class="container">
   <div class="row">
   <div class="col-md-1"></div>
   <div class="col-md-10">
     <div id="nameCourse">
+<h1 id="mainHeader"class="starter-template">Please complete the following survey!</h1>
+<p id="mainPara" class="lead">Thank you in advance.</p>
       <form class="form-inline">
         <div class="form-group">
           <div id="firstNameAlert" class="alert alert-danger">This is a required field</div>
@@ -78,12 +68,12 @@
         <div class="form-group">
           <div id="phoneAlert" class="alert alert-danger">This is a required field</div>
           <label for="">Cell Phone:</label>
-          <input type="text" class="form-control" id="cellPhone">
+          <input type="text" class="form-control" id="cellPhone" placeholder="xxx-xxx-xxxx">
         </div>
         <div class="form-group">
           <div id="timeAlert" class="alert alert-danger">This is a required field</div>
           <label for="">Best Day/Time to Call:</label>
-          <input type="text" class="form-control" id="bestTime">
+          <input type="text" class="form-control" id="bestTime" placeholder="Ex: Mon/Wed around 4">
         </div>
       </form>
 
@@ -115,9 +105,13 @@
     <div class="wrap" id="likertForm">
       <form action="">
 
+        <p><strong>Directions:</strong> Please indicate your opinion about each of the questions below by marking any one of the nine responses in the columns on the right side, ranging from (1) “None at all” to (9) “A Great Deal” as each represents a degree on the continuum.</p>
+        <p>Please respond to each of the questions by considering the combination of your current ability, resources, and opportunity to do each of the following in your present position.</p>
         <label class="statement" id="questionNo"></label>
+
         <div id="noAns" class="alert alert-danger">Please select a response.</div>
         <label class="statement" id="question"></label>
+
         <ul class='likert'>
           <li>
             <input class="radioButton" type="radio" name="likert" value="1">
@@ -156,7 +150,8 @@
       </form>
       </div>
 
-            <button type="button" class="btn btn-default btn-sm" style="margin-left: 30px" id="next" onclick="buttonClicked()"> Next</button> 
+          <br>
+            <button type="button" class="btn btn-primary btn-sm" style="margin-left: 30px" id="next" onclick="buttonClicked()"> Next</button> 
 
 
           <button type="button" class="btn btn-danger" style="margin-left: 30px" id="noAns" >Please Select a Response</button>
